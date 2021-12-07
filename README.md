@@ -1,5 +1,3 @@
-
-
 # Pamphlets2Reader
 
 Given a set of MARC records, the two Python scripts in this repository will create a directory of content suitable for processing by the Distant Reader; this is a demonstration of how MARC data can be used as input to a thing called the [Distant Reader](https://distantreader.org).
@@ -32,7 +30,7 @@ The first, [`marc2csv.py`](./bin/marc2csv.py) reads a given file of MARC records
 
 The second script, [`harvest.py`](./bin/harvest.py) is a bit trickier. It reads the CSV file from the previous step, creates a queue of things to download, and processes the queue in parallel. This means, it processes the queue with as any processors ("cores") you have in your computer, which can considerably speed up the harvesting process. As it downloads the remote content, it uses [Tika](https://tika.apache.org) to extract the OCR, and saves the result to the file system. (It is up to you to load the Tika server and run it as a separate process.)
 
-Once you have gotten this far, compress (zip) the pamphlets directory and all it contains. You can then submit the compressed file to the Distant Reader. The Reader will then do the feature extraction, save the result as a data set, and one can analyze the data set in order to address the interesting questions. This data set ("study carrel") has already been created, and it ought to be available in the Reader's Library. See: [INSERT LINK HERE]
+Once you have gotten this far, compress (zip) the pamphlets directory and all it contains. You can then submit the compressed file to the Distant Reader. The Reader will then do the feature extraction, save the result as a data set, and one can analyze the data set in order to address the interesting questions. This data set ("study carrel") has already been created, and it is temporarily available to [read](http://dh.crc.nd.edu/tmp/catholic-pamphlets/index.htm), [browse](http://dh.crc.nd.edu/tmp/catholic-pamphlets/), or [download](http://dh.crc.nd.edu/tmp/catholic-pamphlets/study-carrel.zip). 
 
 
 ## Summary
@@ -41,4 +39,4 @@ Suppose you have digitized a number of collections, and suppose you have describ
 
 ---
 Eric Lease Morgan &lt;emorgan@nd.edu&gt;  
-December 6, 2021
+December 7, 2021
